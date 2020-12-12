@@ -1,13 +1,23 @@
 .wrap-form {
-  display: flex;
-  align-items: center;
+  @include for-size(desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 .form-footer {
+  @include for-size(mobile-only) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   display: block;
-  margin-right: 12px;
+  @include for-size(desktop) {
+    margin-right: 12px;
+  }
 }
 .input-footer {
-  width: 358px;
+  width: 100%;
+
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: #2f303a;
@@ -15,6 +25,10 @@
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
   outline: none;
+
+  @include for-size(desktop) {
+    width: 358px;
+  }
 }
 .button-footer {
   display: inline-flex;
@@ -43,5 +57,25 @@
     background-image: url(../icons/gitignore.svg);
     background-size: contain;
     background-repeat: no-repeat;
+  }
+}
+
+.footer-tablet {
+  @include for-size(desktop) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .footer-tablet {
+    display: flex;
+    justify-content: center;
+  }
+}
+@include for-size(tablet) {
+  .footer-container.footer-widget {
+    width: calc(100% / 2);
   }
 }

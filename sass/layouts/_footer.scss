@@ -4,18 +4,35 @@
 }
 
 .footer-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @include for-size(mobile-only) {
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
 .footer-widget {
-  width: calc((50% - 45px) / 2);
-
-  &:last-child {
-    width: calc(50% - 15px);
+  display: inline-block;
+  flex-basis: calc(100% / 2);
+  margin-bottom: 60px;
+  @include for-size(desktop) {
+    width: calc(100% / 3);
   }
 }
+
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -23,11 +40,17 @@
 
 .address {
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @include for-size(desktop) {
+    margin-bottom: 9px;
+  }
 }
 
-.footer-contact .footer-contact-item:not(:last-child) {
-  margin-bottom: 9px;
+.footer-contact-item:not(:last-child) {
+  margin-bottom: 8px;
+  @include for-size(desktop) {
+    margin-bottom: 9px;
+  }
 }
 
 .join {
@@ -40,6 +63,9 @@
 
 .social-icons-footer {
   display: flex;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
 }
 
 .social-icons-link-footer {
@@ -59,4 +85,12 @@
   width: 20px;
   height: 20px;
   fill: $white;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .footer-widget-form {
+    display: inline-block;
+    width: 450px;
+    align-items: center;
+  }
 }
