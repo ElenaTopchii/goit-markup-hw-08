@@ -1,0 +1,34 @@
+.menu {
+  display: flex;
+  margin-left: 93px;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include fonts(14px, 500, 1.142, 0.02em);
+  color: $black;
+}
+
+.current {
+  color: $accent-cl;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-cl;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+  }
+}

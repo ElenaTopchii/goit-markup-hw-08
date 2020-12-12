@@ -1,0 +1,10 @@
+.logo {
+  font-family: "Raleway", sans-serif;
+  @include fonts(26px, 700, 1.192);
+  color: $black;
+  text-decoration: none;
+}
+
+.logo-accent {
+  color: $accent-cl;
+}

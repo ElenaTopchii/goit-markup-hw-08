@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  outline: 2px solid red;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  @include fonts(14px, 400, 1.714);
+  color: $main-text-cl;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-size(mobile) {
+    width: 480px;
+  }
+
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
+}
+
+.title {
+  font-family: inherit;
+  color: $black;
+}
+
+.page-title {
+  margin-bottom: 30px;
+  @include fonts(44px, 900, 1.363, 0.06em);
+  text-transform: uppercase;
+}
+
+.item-title {
+  margin-bottom: 10px;
+  @include fonts(16px, 500, 1.187);
+
+  color: $black;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    @include transition;
+    color: $accent-cl;
+  }
+}

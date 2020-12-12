@@ -1,0 +1,49 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icons-block {
+  margin-right: 122px;
+  margin-left: 122px;
+  padding-bottom: 24px;
+
+  @include for-size(tablet) {
+    margin-right: 74px;
+    margin-left: 74px;
+  }
+  @include for-size(desktop) {
+    margin-right: 32px;
+    margin-left: 32px;
+    padding-bottom: 30px;
+  }
+}
+
+.social-icons-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons-link {
+  @include display-center;
+  width: 44px;
+  height: 44px;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: $icons-bg;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  @include transition;
+  background-color: $accent-cl;
+}
+
+.social-icons-link:hover .social-icons-svg,
+.social-icons-link:focus .social-icons-svg {
+  @include transition;
+  fill: $white;
+}

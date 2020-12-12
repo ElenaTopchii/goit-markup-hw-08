@@ -1,0 +1,54 @@
+.contact-list {
+  display: flex;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.mail-link,
+.tel-link {
+  @include fonts(14px, 500, 1.142, 0.02em);
+}
+
+.mail-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 16px;
+  height: 12px;
+  fill: $main-text-cl;
+}
+
+.tel-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 10px;
+  height: 16px;
+  fill: $main-text-cl;
+}
+
+.contact-item:hover,
+.contact-item:focus {
+  @include transition;
+  fill: $accent-cl;
+}
+
+.contact-item:hover .mail-icon,
+.contact-item:focus .mail-icon {
+  @include transition;
+  fill: $accent-cl;
+}
+
+.contact-item:hover .tel-icon,
+.contact-item:focus .tel-icon {
+  @include transition;
+  fill: $accent-cl;
+}

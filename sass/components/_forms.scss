@@ -1,0 +1,47 @@
+.wrap-form {
+  display: flex;
+  align-items: center;
+}
+.form-footer {
+  display: block;
+  margin-right: 12px;
+}
+.input-footer {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: #2f303a;
+  border-radius: 4px;
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+.button-footer {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  height: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #2196f3;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #fff;
+  @include fonts(16px, 700, 1.875, 0.006em);
+  text-align: center;
+  outline: none;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    margin-left: 10px;
+    margin-right: 0;
+    background-image: url(../icons/gitignore.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
