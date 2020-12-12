@@ -60,9 +60,12 @@ address {
 }
 
 .page-title {
+  @include fonts(26px, 900, 1.615, 0.06em);
   margin-bottom: 30px;
-  @include fonts(44px, 900, 1.363, 0.06em);
   text-transform: uppercase;
+  @include for-size(desktop) {
+    @include fonts(44px, 900, 1.363, 0.06em);
+  }
 }
 
 .item-title {
