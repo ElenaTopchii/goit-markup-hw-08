@@ -7,11 +7,27 @@
 .portfolio-list {
   @include display-center;
   margin-bottom: 34px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 25px;
+  }
 }
 
+.portfolio-item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+}
 .portfolio-item:not(:last-child) {
   margin-right: 8px;
 }
+
+// .portfolio-item: @include for-size(mobile-only) {
+//   margin-bottom: 15px;
+// }
 
 .project-list {
   display: flex;
@@ -58,19 +74,40 @@
 }
 
 .project-item {
-  /* display: block; */
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
+  width: 100%;
+  margin: 0;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
-  background-color: $white;
 
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  &:nth-last-child(-n + 3) {
+  &:last-child {
     margin-bottom: 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+  @include for-size(desktop) {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #eeeeee;
+    background-color: $white;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
   }
 }
 .project-text {

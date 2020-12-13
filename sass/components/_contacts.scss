@@ -1,10 +1,12 @@
 .contact-list {
-  // display: flex;
-
   @include for-size(tablet) {
     margin-top: 0;
-    margin-left: 84px;
+
     text-align: left;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    margin-left: 84px;
   }
 }
 
@@ -17,12 +19,22 @@
 .mail-link,
 .tel-link {
   display: inline-flex;
-  @include fonts(14px, 500, 1.142, 0.02em);
+  @include fonts(18px, 500, 1.166, 0.02em);
+  @include for-size(tablet) {
+    @include fonts(12px, 500, 1.166, 0.02em);
+  }
+  @include for-size(desktop) {
+    @include fonts(14px, 500, 1.142, 0.02em);
+  }
+}
+@media screen and (max-widt: 767px) {
+  .mail-link:first-child {
+    margin-bottom: 16px;
+  }
 }
 
-@include for-size(tablet) {
-  .mail-link:first-child,
-  .tel-link:first-child {
+@media screen and (max-width: 1199px) {
+  .mail-link:first-child {
     margin-bottom: 10px;
   }
 }

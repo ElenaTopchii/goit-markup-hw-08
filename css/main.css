@@ -63,7 +63,7 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -164,19 +164,29 @@ address {
   color: #212121;
 }
 
-.menu {
-  display: flex;
-  margin-left: 93px;
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+    margin-left: 88px;
+  }
 }
 
-.menu-item:not(:last-child) {
-  margin-right: 50px;
+@media (min-width: 1200px) {
+  .menu {
+    margin-left: 93px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .menu-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 0;
+  padding-bottom: 40px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.142;
@@ -184,9 +194,17 @@ address {
   color: #212121;
 }
 
+@media (min-width: 768px) {
+  .menu-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 .current {
   color: #2196f3;
   position: relative;
+  display: inline-block;
 }
 
 .current::after {
@@ -203,7 +221,6 @@ address {
 }
 
 .menu-button {
-  position: absolute;
   display: inline-flex;
   top: 10px;
   right: 10px;
@@ -237,10 +254,24 @@ address {
   display: none;
 }
 
+.burger-menu.is-open .icon-cross {
+  display: block;
+  fill: #757575;
+}
+
+.burger-menu.is-open .icon-cross:hover, .burger-menu.is-open .icon-cross:focus {
+  fill: #2196f3;
+}
+
+.menu-button:hover .icon-cross,
+.menu-button:hover .icon-menu {
+  fill: #2196f3;
+}
+
 .menu-container {
+  z-index: 1;
   background-color: #ffffff;
   text-align: center;
-  padding: 20px;
 }
 
 @media screen and (max-width: 767px) {
@@ -251,26 +282,63 @@ address {
     width: 100%;
     left: 0;
   }
-}
-
-@media (min-width: 768px) {
-  .menu-container {
-    display: flex;
-  }
   .menu-container.is-open {
     display: block;
   }
 }
 
+@media (min-width: 768px) {
+  .menu-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1119px) and (min-width: 768px) {
+  .menu-container {
+    align-items: center;
+  }
+}
+
 .menu-navigation {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-navigation {
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 1119px) {
+  .menu-navigation {
+    width: 100%;
+  }
 }
 
 .menu-contacts {
-  display: flex;
-  margin-top: 21px;
-  margin-bottom: 21px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .menu-contacts {
+    display: inline-flex;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-contacts {
+    display: flex;
+  }
 }
 
 .logo {
@@ -351,8 +419,14 @@ address {
 @media (min-width: 768px) {
   .contact-list {
     margin-top: 0;
-    margin-left: 84px;
     text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-list {
+    display: flex;
+    margin-left: 84px;
   }
 }
 
@@ -365,15 +439,40 @@ address {
 .mail-link,
 .tel-link {
   display: inline-flex;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.142;
+  line-height: 1.166;
   letter-spacing: 0.02em;
 }
 
 @media (min-width: 768px) {
-  .mail-link:first-child,
-  .tel-link:first-child {
+  .mail-link,
+  .tel-link {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mail-link,
+  .tel-link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.142;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (max-widt: 767px) {
+  .mail-link:first-child {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .mail-link:first-child {
     margin-bottom: 10px;
   }
 }
@@ -481,6 +580,8 @@ section {
   align-items: center;
   margin-right: auto;
   justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid #757575;
 }
 
 .hero {
@@ -766,7 +867,7 @@ section {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1999px) {
+@media screen and (max-width: 1199px) {
   .clients-list {
     justify-content: center;
     margin: -15px;
@@ -790,7 +891,7 @@ section {
   margin: 15px;
 }
 
-@media screen and (max-width: 1999px) {
+@media screen and (max-width: 1199px) {
   .clients-item {
     height: 90px;
     width: calc((100% - 60px) / 2);
