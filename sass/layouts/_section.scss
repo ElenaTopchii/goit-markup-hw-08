@@ -16,6 +16,7 @@ section {
   margin-bottom: 30px;
   @include fonts(28px, 700, 1.178);
   text-align: center;
+
   @include for-size(desktop) {
     margin-bottom: 50px;
     @include fonts(36px, 700, 1.666);

@@ -1,4 +1,5 @@
 .footer {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -25,9 +26,12 @@
 }
 
 .footer-widget {
-  display: inline-block;
-  flex-basis: calc(100% / 2);
   margin-bottom: 60px;
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    display: inline-block;
+    flex-basis: calc(100% / 2);
+    margin-bottom: 60px;
+  }
   @include for-size(desktop) {
     width: calc(100% / 3);
   }

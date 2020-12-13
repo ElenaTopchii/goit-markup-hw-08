@@ -45,6 +45,7 @@
   max-width: 360px;
   text-align: center;
   text-align: center;
+
   @include for-size(desktop) {
     max-width: 696px;
   }
