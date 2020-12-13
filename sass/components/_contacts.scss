@@ -1,16 +1,37 @@
 .contact-list {
-  display: flex;
+  // display: flex;
+
+  @include for-size(tablet) {
+    margin-top: 0;
+    margin-left: 84px;
+    text-align: left;
+  }
 }
 
-.contact-item:not(:last-child) {
-  margin-right: 50px;
+@include for-size(desktop) {
+  .contact-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .mail-link,
 .tel-link {
+  display: inline-flex;
   @include fonts(14px, 500, 1.142, 0.02em);
 }
 
+@include for-size(tablet) {
+  .mail-link:first-child,
+  .tel-link:first-child {
+    margin-bottom: 10px;
+  }
+}
+.mail-link .mail-icon {
+  margin-right: 4px;
+  @include for-size(tablet) {
+    margin-top: 0;
+  }
+}
 .mail-icon {
   display: inline-flex;
   justify-content: center;

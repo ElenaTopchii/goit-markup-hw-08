@@ -225,10 +225,6 @@ address {
   padding: 20px;
 }
 
-.menu-container.is-open {
-  display: block;
-}
-
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
@@ -237,6 +233,26 @@ address {
     width: 100%;
     left: 0;
   }
+}
+
+@media (min-width: 768px) {
+  .menu-container {
+    display: flex;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+.menu-navigation {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.menu-contacts {
+  display: flex;
+  margin-top: 21px;
+  margin-bottom: 21px;
 }
 
 .btn {
@@ -273,6 +289,7 @@ address {
 }
 
 .logo {
+  display: inline-flex;
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -346,20 +363,44 @@ address {
   fill: #ffffff;
 }
 
-.contact-list {
-  display: flex;
+@media (min-width: 768px) {
+  .contact-list {
+    margin-top: 0;
+    margin-left: 84px;
+    text-align: left;
+  }
 }
 
-.contact-item:not(:last-child) {
-  margin-right: 50px;
+@media (min-width: 1200px) {
+  .contact-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .mail-link,
 .tel-link {
+  display: inline-flex;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.142;
   letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .mail-link:first-child,
+  .tel-link:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+.mail-link .mail-icon {
+  margin-right: 4px;
+}
+
+@media (min-width: 768px) {
+  .mail-link .mail-icon {
+    margin-top: 0;
+  }
 }
 
 .mail-icon {
@@ -451,10 +492,10 @@ section {
 }
 
 .navigation {
-  position: relative;
   display: flex;
   align-items: center;
   margin-right: auto;
+  justify-content: space-between;
 }
 
 .portfolio-nav {
