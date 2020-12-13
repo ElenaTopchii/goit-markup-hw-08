@@ -32,3 +32,54 @@
     bottom: 0;
   }
 }
+
+.menu-button {
+  position: absolute;
+  display: inline-flex;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 10px;
+  border: 0;
+  text-align: center;
+  background-color: transparent;
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.icon-cross {
+  margin-top: 12px;
+  padding-bottom: 12px;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  background-color: $white;
+  
+  text-align: center;
+  padding: 20px;
+
+  &.is-open {
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+  width: 100%;
+  left: 0;
+  }
+}

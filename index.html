@@ -12,30 +12,44 @@
 </head>
 
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header-container">
             <nav class="navigation">
                 <a href="./index.html" class="logo"><span class="logo-accent">Web</span>Studio</a>
-                <ul class="list menu">
-                    <li class="menu-item"><a href="" class="link menu-link current">Студия</a></li>
-                    <li class="menu-item"><a href="./portfolio.html" class="link menu-link">Портфолио</a></li>
-                    <li class="menu-item"><a href="#contact" class="link menu-link">Контакты</a></li>
-                </ul>
+                <button type="button" class="menu-button" data-menu-button aria-expanded="false">
+                    <svg class="burger-menu" aria-label="переключатель" width="24" height="19"
+                        aria-controls="menu-container">
+                        <use class="icon-menu" href="./icons/sprite.svg#icon-menu"></use>
+                        <use class="icon-cross" width="19" height="19" href="./icons/sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+
+                    <div class="menu-navigation">
+                        <ul class="list menu">
+                            <li class="menu-item"><a href="" class="link menu-link current">Студия</a></li>
+                            <li class="menu-item"><a href="./portfolio.html" class="link menu-link">Портфолио</a></li>
+                            <li class="menu-item"><a href="#contact" class="link menu-link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-contacts">
+                        <ul class="list contact-list">
+                            <li class="contact-item"><a href="mailto:info@devstudio.com" class="link mail-link"><svg
+                                        class="mail-icon">
+                                        <use href="./icons/sprite.svg#icon-e-mail"></use>
+                                    </svg>info@devstudio.com</a></li>
+                            <li class="contact-item"><a href="tel:+380961111111" class="link tel-link"><svg
+                                        class="tel-icon">
+                                        <use href="./icons/sprite.svg#icon-tel"></use>
+                                    </svg>+38 096 111 11 11</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-
-            <ul class="list contact-list">
-                <li class="contact-item"><a href="mailto:info@devstudio.com" class="link mail-link"><svg
-                            class="mail-icon">
-                            <use href="./icons/sprite.svg#icon-e-mail"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li class="contact-item"><a href="tel:+380961111111" class="link tel-link"><svg class="tel-icon">
-                            <use href="./icons/sprite.svg#icon-tel"></use>
-                        </svg>+38 096 111 11 11</a></li>
-            </ul>
         </div>
-    </header> -->
+    </header>
 
-    <main>
+    <!-- <main>
         <section class="hero dark-bg ">
             <div class="hero-content">
                 <h1 class="title page-title">Эффективные решения для вашего бизнеса</h1>
@@ -463,7 +477,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- <div class="backdrop is-hidden" data-modal>
         <div class="modal-box">
 
@@ -516,6 +530,7 @@
 
         </div>
     </div> -->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 
