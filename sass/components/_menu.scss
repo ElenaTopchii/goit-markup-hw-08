@@ -10,25 +10,33 @@
 @include for-size(tablet) {
   .menu-item:not(:last-child) {
     margin-right: 50px;
+    // padding-bottom: 0;
+  }
+}
+
+.menu-item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    padding-bottom: 40px;
   }
 }
 
 .menu-link {
   display: block;
   padding-top: 0;
-  padding-bottom: 40px;
-  @include fonts(14px, 500, 1.142, 0.02em);
+  //
+  @include fonts(18px, 500, 1.166, 0.02em);
   color: $black;
+
   @include for-size(tablet) {
+    padding-bottom: 40px;
     padding-top: 32px;
     padding-bottom: 32px;
+    @include fonts(14px, 500, 1.142, 0.02em);
   }
 }
 
-// @media screen and (max-width: 767px) {
-//   .menu-link:last-child {
-//     padding-bottom: 0;
-//   }
+// .menu-link:last-child {
+//   padding-bottom: 0;
 // }
 
 .current {
@@ -46,10 +54,16 @@
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    bottom: 0;
+
+    margin-top: 8px;
+    @include for-size(tablet) {
+      bottom: 0;
+    }
   }
 }
-
+// .menu-link.current {
+//   padding-top: 8px;
+// }
 .menu-button {
   // position: absolute;
   display: inline-flex;
@@ -149,6 +163,10 @@
 
 .menu-contacts {
   align-items: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
   @include for-size(tablet) {
     display: inline-flex;
     padding-top: 21px;

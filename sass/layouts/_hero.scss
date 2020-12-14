@@ -1,8 +1,10 @@
 .hero {
+  width: 100%;
+  text-align: -webkit-center;
   padding-top: 118px;
   padding-bottom: 118px;
-  padding-left: 60px;
-  padding-right: 60px;
+  // padding-left: 60px;
+  // padding-right: 60px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../img/mobile/hero-mobile.jpg);
   background-repeat: no-repeat;

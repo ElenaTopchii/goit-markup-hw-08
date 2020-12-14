@@ -164,21 +164,31 @@ address {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .menu-item:not(:last-child) {
+    padding-bottom: 40px;
+  }
+}
+
 .menu-link {
   display: block;
   padding-top: 0;
-  padding-bottom: 40px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.142;
+  line-height: 1.166;
   letter-spacing: 0.02em;
   color: #212121;
 }
 
 @media (min-width: 768px) {
   .menu-link {
+    padding-bottom: 40px;
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.142;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -198,7 +208,13 @@ address {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  bottom: 0;
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .current::after {
+    bottom: 0;
+  }
 }
 
 .menu-button {
@@ -306,6 +322,12 @@ address {
 
 .menu-contacts {
   align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-contacts {
+    margin-bottom: 60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -595,7 +617,12 @@ section {
   margin-right: auto;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 2px solid #757575;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    height: 60px;
+  }
 }
 
 .portfolio-nav {
@@ -678,6 +705,7 @@ section {
 }
 
 .project-item {
+  border: 1px solid #eeeeee;
   width: 100%;
   margin: 0;
   margin-bottom: 30px;
@@ -695,9 +723,6 @@ section {
   }
   .project-item:nth-child(2n) {
     margin-right: 0;
-  }
-  .project-item:nth-last-child(-n + 2) {
-    margin-bottom: 0;
   }
 }
 
